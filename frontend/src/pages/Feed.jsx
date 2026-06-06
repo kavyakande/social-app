@@ -14,7 +14,7 @@ export default function Feed() {
     const token = localStorage.getItem('token');
     if (!token) navigate('/');
     else fetchPosts();
-  }, []);
+  }, [navigate]);
 
   const fetchPosts = async () => {
     try {
